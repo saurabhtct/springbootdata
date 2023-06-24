@@ -20,14 +20,12 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public ArrayList<Customer> findAllCustomer() {
-		// TODO Auto-generated method stub
-		return null;
+		return (ArrayList<Customer>)customerRepository.findAll();
 	}
 
 	@Override
 	public Customer findAllCustomerByID(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return customerRepository.findById(id);
 	}
 
 	@Override
@@ -45,8 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public void deleteAllData() {
-		// TODO Auto-generated method stub
-
+		customerRepository.deleteAll();
 	}
 
 }
